@@ -1,0 +1,126 @@
+@use "../abstracts/helper"as *;
+
+.banner {
+   padding: 0;
+   height: 96vh;
+   background-color: $color-secondary;
+
+   .container {
+      height: 100%;
+   }
+
+   .banner-wrapper {
+      height: 100%;
+      @extend .flexRow-between;
+   }
+
+   .banner-companies {
+      span {
+         color: white;
+         font-size: $fs-body;
+      }
+
+      svg {
+         fill: white;
+      }
+
+      ul {
+         gap: 2rem;
+         display: flex;
+         margin-top: 3rem;
+         align-items: center;
+      }
+   }
+
+   .banner-content {
+      width: 40%;
+      transform: translateY(6rem);
+
+      h1 {
+         color: $color-primary;
+      }
+
+      p {
+         color: white;
+         padding: 2rem 0 3rem;
+      }
+
+      .btn-primary {
+         margin-bottom: 6rem;
+      }
+   }
+}
+
+.banner-images {
+   width: 60%;
+   display: flex;
+   align-items: end;
+   flex-direction: column;
+   transform: translateY(6rem);
+
+   img {
+      transition: transform 0.3s ease-in-out;
+
+      &:first-child {
+         width: 40%;
+         text-align: right;
+
+         &:hover {
+            transform: translateY(-0.6rem);
+         }
+      }
+
+      &:nth-child(2) {
+         width: 60%;
+         margin: 3rem 0;
+
+         &:hover {
+            transform: translateY(-0.6rem);
+         }
+      }
+
+      &:last-child {
+         width: 20%;
+         transform: translateX(-25rem);
+
+         &:hover {
+            transform: translate(-25rem, -0.6rem);
+         }
+      }
+
+   }
+}
+
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 1000px) {
+
+   .banner-images {
+      display: none;
+   }
+
+   .banner {
+
+      .banner-content {
+         width: 100%;
+         text-align: center;
+      }
+
+      .banner-companies ul {
+         justify-content: center;
+      }
+   }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1260px) {
+   .banner {
+
+      .banner-content {
+         width: 60%;
+      }
+   }
+}

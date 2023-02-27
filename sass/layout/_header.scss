@@ -1,0 +1,153 @@
+@use "../abstracts/helper"as *;
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 99;
+   padding: 3rem 0;
+   background: transparent;
+   transition: box-sizing 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+   nav,
+   .header-wrapper {
+      gap: 4rem;
+      @extend .flexRow-between;
+   }
+
+   &.sticky {
+      padding: 1.5rem 0;
+      box-sizing: $box-shadow-sm;
+      background: $color-gradient;
+   }
+}
+
+.nav-list {
+   gap: 2rem;
+   @extend .flexRow-between;
+
+   .nav-item {
+      display: flex;
+   }
+
+   .nav-link {
+      color: white;
+      padding: 2rem;
+      font-size: $fs-subheading;
+      transition: color 0.3s ease-in-out;
+
+      &.active {
+         font-weight: 600;
+         color: $color-primary;
+      }
+
+      &:hover {
+         color: $fm-primary;
+      }
+   }
+}
+
+.hamburger-menu {
+   height: 3.6rem;
+   display: none;
+   width: 3.6rem;
+   cursor: pointer;
+   @extend .flexColumn-evenly;
+
+   .line {
+      width: 3.6rem;
+      height: 0.1rem;
+      background-color: $color-light-100;
+      transition: width 0.3s ease-in-out;
+   }
+
+   &:hover .line {
+
+      &:first-child {
+         width: 25%;
+      }
+
+      &:nth-child(2) {
+         width: 50%;
+      }
+   }
+}
+
+.sidebar-menu {
+   width: 100%;
+   z-index: 999;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   display: none;
+   position: fixed;
+   padding: 4rem 0 6rem;
+   background: $color-gradient;
+
+   &.openSidebar {
+      display: block;
+   }
+
+   .container-fluid,
+   .sidebar-wrapper {
+      height: 100%
+   }
+
+   .sidebar-item {
+      display: flex;
+   }
+
+   .sidebar-link {
+      color: white;
+      padding: 2rem 0;
+      font-weight: 400;
+      font-size: 4.2rem;
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+      &:hover {
+         color: $color-primary;
+         transform: translateX(1rem)
+      }
+   }
+
+   .social-links {
+      gap: 2rem;
+      display: flex;
+      margin-bottom: 3rem;
+
+      svg {
+         fill: white;
+         transition: fill 0.3s ease-in-out;
+
+         &:hover {
+            fill: $color-primary;
+         }
+      }
+   }
+
+   .sidebar-wrapper {
+      @extend .flexColumn-between;
+   }
+
+   .sidebar-topbar {
+      width: 100%;
+      @extend .flexRow-between;
+   }
+}
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 991px) {
+
+   .navbar {
+      display: none;
+   }
+
+   .hamburger-menu {
+      display: flex;
+   }
+}

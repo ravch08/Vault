@@ -1,0 +1,65 @@
+@use "../abstracts/helper"as *;
+
+.testimonials {
+
+   .heading {
+      width: 60%;
+      text-align: center;
+      margin: 0 auto 6rem;
+
+      h2 {
+         margin-bottom: 2rem;
+         text-transform: uppercase;
+      }
+   }
+
+   .swiper {
+      padding: 3rem;
+   }
+
+   .testimonial-item {
+      padding: 3rem 1.5rem;
+      border-radius: 2rem;
+      background-color: white;
+      border: 0.1rem solid hsl(0, 0%, 87%);
+      transition: box-shadow 0.3s ease-in-out;
+
+      img {
+         width: 8rem;
+         margin-bottom: 1.4rem;
+         border-radius: 50%;
+      }
+
+      h4 {
+         font-size: 1.4rem;
+         font-weight: 100;
+         margin: .6rem 0 1.2rem;
+         letter-spacing: 0.1rem;
+      }
+
+      p {
+         font-size: 1.4rem;
+         margin-bottom: 2rem;
+      }
+
+      svg {
+         fill: goldenrod;
+      }
+
+      &:hover {
+         box-shadow: $box-shadow-md;
+      }
+   }
+}
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 991px) {
+
+   .testimonials .heading {
+      width: 100%;
+   }
+}

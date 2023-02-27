@@ -1,0 +1,116 @@
+@use "../abstracts/helper"as *;
+
+
+footer {
+   padding: $section-padding 0;
+   background-color: $color-secondary;
+
+   .footer-heading {
+      width: 80%;
+
+      h2 {
+         color: white;
+         margin-bottom: 1.5rem;
+      }
+
+      p {
+         color: white;
+      }
+   }
+
+   .footer-items {
+      @extend .flexRow-end;
+   }
+
+   .footer-list {
+      @extend .flexColumn-start;
+
+      p {
+         font-size: 1.3rem;
+         color: white;
+      }
+
+      h3 {
+         color: white;
+         margin-bottom: 1.5rem;
+      }
+
+      a {
+         color: white;
+         padding: 0.8rem 0;
+         transition: color 0.3s ease-in-out;
+
+         &:hover {
+            color: $color-primary;
+         }
+      }
+
+      .social-links {
+         margin: 2rem 0;
+
+         svg {
+            margin: 0 0.6rem;
+            fill: white;
+         }
+      }
+   }
+
+   .scrollTop {
+      bottom: 5%;
+      right: 5%;
+      width: 4rem;
+      height: 4rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: fixed;
+      transform: scale(0);
+      @extend .flexRow-center;
+      background-color: $color-primary;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:hover {
+         background-color: darken($color-primary, 10%);
+      }
+
+      &.show {
+         transform: scale(1);
+      }
+   }
+}
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 768px) {
+
+   .heading-flex {
+      align-items: flex-start;
+      flex-direction: column;
+   }
+
+   footer {
+
+      .footer-heading {
+         width: 100%;
+         margin-bottom: 3rem;
+      }
+
+      .footer-items {
+         gap: 4rem;
+         align-items: flex-start;
+         flex-direction: column-reverse;
+      }
+   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 860px) {
+
+   footer {
+      .footer-heading {
+         width: 70%;
+      }
+   }
+}

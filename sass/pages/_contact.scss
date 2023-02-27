@@ -1,0 +1,95 @@
+@use "../abstracts/helper"as *;
+
+.contact-form {
+
+   .contact-wrapper {
+      gap: 6rem;
+      @extend .flexRow-between;
+   }
+
+   form {
+      width: 50%;
+      @extend .flexColumn-start;
+
+      label {
+         color: grey;
+         margin-bottom: 0.8rem;
+      }
+
+      input,
+      textarea {
+         padding: 1.5rem;
+         margin-bottom: 2.5rem;
+         border-radius: 0.6rem;
+         border: 0.2rem solid hsl(0, 0%, 81%);
+
+         &:focus-within {
+            outline: none;
+         }
+      }
+
+      .btn-submit {
+         border: none;
+         cursor: pointer;
+         font-weight: 600;
+         background-color: $color-primary;
+         transition: background-color 0.3s ease-in-out;
+
+         &:hover {
+            background-color: darken($color-primary, 10%);
+         }
+      }
+   }
+}
+
+.contact-content {
+   h2 {
+      margin-bottom: 2rem;
+   }
+
+   h3 {
+      padding: 2rem 0;
+   }
+
+   .address {
+      margin-bottom: 2rem;
+   }
+
+   span {
+      font-size: 1.6rem;
+   }
+
+   a {
+      font-style: italic;
+      color: $color-tertiary;
+   }
+}
+
+.location {
+   padding: 0;
+}
+
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 820px) {
+
+   .contact-form {
+
+      form {
+         width: 90%;
+      }
+
+      .contact-content {
+         width: 90%;
+      }
+
+      .contact-wrapper {
+         gap: 6rem;
+         flex-direction: column-reverse;
+      }
+   }
+}

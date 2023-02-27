@@ -1,0 +1,263 @@
+@use "../abstracts/helper"as *;
+
+.whyVault {
+
+   .heading-flex {
+      h2 {
+         width: 50%
+      }
+
+      p {
+         width: 40%;
+      }
+   }
+}
+
+.why-items {
+   gap: 3rem;
+   @extend .flexRow-between;
+
+   h3 {
+      font-size: $fs-h2;
+   }
+
+   h4 {
+      padding: 2rem 0;
+   }
+}
+
+.virtual-card-wrapper {
+   @extend .flexRow-between;
+
+   .virtual-card-content {
+      width: 40%;
+
+      p {
+         padding: 3rem 0;
+      }
+   }
+
+   .virtual-img {
+      gap: 4rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .virtual-card-images {
+      gap: 3rem;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      img {
+         border-radius: 0.8rem;
+         box-shadow: $box-shadow-md;
+         transition: transform 0.7s ease-in-out;
+      }
+
+      .virtual-img-1 {
+         width: 26rem;
+
+         &:hover {
+            transform: translateY(-1rem);
+         }
+      }
+
+      .virtual-img-2 {
+         width: 16rem;
+
+         &:hover {
+            transform: translateY(-1rem);
+         }
+      }
+
+      .virtual-img-3 {
+         width: 25rem;
+
+         &:hover {
+            transform: translateY(-1rem);
+         }
+      }
+   }
+}
+
+.billing-wrapper {
+   @extend .flexRow-between;
+
+   .billing-images {
+      width: 40%;
+
+      img {
+         border-radius: 0.8rem;
+         box-shadow: $box-shadow-md;
+         transition: transform 0.7s ease-in-out;
+      }
+
+      .billing-image-1 {
+         width: 40rem;
+
+         &:hover {
+            transform: translate(0, -1rem);
+         }
+      }
+
+      .billing-image-2 {
+         width: 25rem;
+         transform: translate(20rem, -4rem);
+
+         &:hover {
+            transform: translate(20rem, -5rem);
+         }
+      }
+   }
+
+   .billing-content {
+      width: 50%;
+
+      p {
+         padding: 3rem 0;
+      }
+   }
+}
+
+// --------------------------------------------------------
+//                      MEDIA QUERIES
+// --------------------------------------------------------
+
+
+@media screen and (max-width: 700px) {
+
+   .whyVault {
+
+      .heading-flex {
+         h2 {
+            width: 100%;
+            margin-bottom: 1.2rem;
+         }
+
+         p {
+            width: 100%;
+         }
+      }
+   }
+
+   .why-items {
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 600px) {
+
+   .virtual-card-wrapper {
+      gap: 3rem;
+      flex-direction: column;
+
+      .virtual-card-content {
+         width: 100%;
+      }
+
+      .virtual-card-images {
+         width: 100%;
+         flex-direction: column;
+
+         .virtual-img-1,
+         .virtual-img-2,
+         .virtual-img-3 {
+            width: 100%;
+         }
+      }
+   }
+
+   .billing-wrapper {
+      gap: 4rem;
+      flex-direction: column-reverse;
+
+      .billing-content {
+         width: 100%;
+      }
+
+      .billing-images {
+         width: 100%;
+
+         .billing-image-2 {
+            width: 100%;
+            margin-top: 1rem;
+            transform: none;
+
+            &:hover {
+               transform: none;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width:601px) and (max-width: 991px) {
+
+   .virtual-card-wrapper {
+      gap: 3rem;
+      flex-direction: column;
+
+      .virtual-card-content {
+         width: 100%;
+      }
+
+      .virtual-img {
+         display: flex;
+         flex-direction: row;
+      }
+
+      .virtual-card-images {
+         width: 100%;
+         flex-direction: column;
+         align-items: flex-start;
+
+         .virtual-img-1 {
+            width: 70%;
+         }
+
+         .virtual-img-2 {
+            width: 20rem;
+
+            &:hover {
+               transform: translateY(-1rem);
+            }
+         }
+
+         .virtual-img-3 {
+            width: 30rem;
+
+            &:hover {
+               transform: translateY(-1rem);
+            }
+         }
+
+      }
+   }
+
+   .billing-wrapper {
+      gap: 4rem;
+      flex-direction: column-reverse;
+
+      .billing-content {
+         width: 100%;
+      }
+
+      .billing-images {
+         width: 100%;
+
+         .billing-image-2 {
+            width: 60%;
+            margin-top: 1rem;
+            transform: translate(16rem, -4rem);
+
+            &:hover {
+               transform: translate(16rem, -5rem);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,64 @@
+// Font Variables -------- fm - Font Family -- fs - Font Size -- fw - Font Weight -------
+
+$fm-body : 'Inter',
+sans-serif;
+
+$fm-primary : 'Space Grotesk',
+sans-serif;
+
+$fs-h1 : 6.0rem;
+$fs-h2 : 4.8rem;
+$fs-h3 : 2.0rem;
+$fs-h4 : 1.8rem;
+$fs-h5 : 1.5rem;
+$fs-h6 : 1.2rem;
+
+$fs-btn : 1.6rem;
+$fs-body : 1.6rem;
+$fs-subheading : 1.5rem;
+
+// -- Line Height - lh -------------------------------------------------------------------
+
+$lh-body : 1.7;
+$lh-heading : 1.2;
+
+// Color Variables -----------------------------------------------------------------------
+
+$color-gradient : linear-gradient(to right, hsl(177, 32%, 15%) 0%, hsl(178, 31%, 24%) 50%, hsl(177, 32%, 20%) 100%);
+
+$color-scrollbar : hsl(0, 0%, 93%);
+$color-scrollThumb : hsl(47, 100%, 84%);
+
+$color-primary : hsl(47, 100%, 84%);
+$color-secondary : hsl(177, 32%, 10%);
+$color-tertiary : hsl(177, 32%, 30%);
+
+$color-light-100 : hsl(0, 0%, 100%);
+$color-light-400 : hsl(0, 0%, 90%);
+$color-light-800 : hsl(0, 0%, 70%);
+
+$color-Dark-100 :hsl(146, 4%, 34%);
+$color-Dark-400 : hsl(147, 35%, 6%);
+$color-Dark-800 : hsl(0, 0%, 0%);
+
+$color-ui-fluid-1: hsl(352, 55%, 84%);
+$color-ui-fluid-2: hsl(33, 62%, 82%);
+$color-ui-fluid-3: hsl(194, 69%, 75%);
+$color-ui-fluid-4: hsl(149, 50%, 77%);
+
+$color-footer : hsl(177, 32%, 15%);
+
+$color-body : hsl(146, 4%, 34%);
+
+// Dimensions Variables ------------------------------------------------------------------
+
+$width-container : 1200px;
+$section-padding : 8rem;
+
+// Box Shadow ----------------------------------------------------------------------------
+
+$box-shadow-lg: 0 1rem 3rem rgba(black, .175);
+$box-shadow-md: 0 .5rem 4rem rgba(black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba(black, .075);
+
+// ----------------------------------------------------------------------------
